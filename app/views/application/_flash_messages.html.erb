@@ -1,5 +1,8 @@
 <% flash.each do |type, message| %>
-  <div class="errors">
-    <p><%= message %></p>
+  <div class="alert alert-info">
+    <%= type %><%= message %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
 <% end %>

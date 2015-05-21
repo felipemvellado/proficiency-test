@@ -7,12 +7,18 @@ class ClassroomsController < ApplicationController
     @classroom = Classroom.new
     @classroom.course = course
     @classroom.student = student
+
     if @classroom.save
-      options = { notice: 'Student was added with successfully.' }
+      options = { info: 'Student was added with successfully.' }
       redirect_to @classroom.course, options
     else
-      render :show
+      options = { danger: 'Error in adding student to course.' }
+      redirect_to course, options
     end
+
+  rescue ActiveRecord::RecordNotFound
+    options = { danger: 'Error in adding student to course.' }
+    redirect_to course, options
   end
 
   private

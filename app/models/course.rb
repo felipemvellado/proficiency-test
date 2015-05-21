@@ -7,4 +7,6 @@ class Course < ActiveRecord::Base
   validates :name, :description, length: { maximum: 45 }
 
   enum status: %i(open closed)
+
+  scope :recent, -> { order(created_at: :desc) }
 end

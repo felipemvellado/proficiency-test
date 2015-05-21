@@ -1,0 +1,39 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* > :first-child {
+  margin-top: 0;
+}
+
+* > :last-child {
+  margin-bottom: 0;
+}
+
+img,
+embed,
+object,
+video{
+  max-width: 100%;
+}
+
+body {
+  line-height: 1;
+  font-family: $font-family-base;
+  color: $text-color;
+  font-size: $font-size-medium;
+  background: $background-color;
+}
+
+select, input, textarea {
+  padding: 5px;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+}

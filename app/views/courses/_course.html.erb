@@ -1,6 +1,12 @@
-<div class="course-info">
-  <h3><%= link_to course.name, course %></h3>
-  <p>Description: <%= course.description %></p>
-  <p>Status: <%= course.status.humanize %></p>
+<div class="col-sm-6 col-md-4">
+  <div class="thumbnail">
+    <h3 class="title-box"><%= link_to course.name, course %></h3>
+
+    <div class="caption">
+      <p class="description"><%= course.description %></p>
+      <div class="footer-status <%= course.status %>">
+        <%= course.status.humanize %>
+      </div>
+    </div>
+  </div>
 </div>
-<hr />

@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
   before_action :find_course, only: %i(edit update destroy)
 
   def index
-    @courses = Course.all
+    @courses = Course.all.recent
   end
 
   def show
@@ -17,7 +17,7 @@ class CoursesController < ApplicationController
     @course = Course.new(course_params)
 
     if @course.save
-      options = { notice: 'Course created with successfully.' }
+      options = { info: 'Course created with successfully.' }
       redirect_to @course, options
     else
       render :new
@@ -29,7 +29,7 @@ class CoursesController < ApplicationController
 
   def update
     if @course.update(course_params)
-      options = { notice: 'Course was updated with successfully.' }
+      options = { info: 'Course was updated with successfully.' }
       redirect_to @course, options
     else
       render :edit
@@ -38,7 +38,7 @@ class CoursesController < ApplicationController
 
   def destroy
     @course.destroy
-    options = { notice: 'Course deleted with successfully.' }
+    options = { info: 'Course deleted with successfully.' }
     redirect_to root_path
   end
 

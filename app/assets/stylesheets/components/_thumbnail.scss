@@ -1,0 +1,43 @@
+.thumbnail {
+  margin: 10px 0;
+  text-align: center;
+
+  a {
+    color: $theme-color;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color: darken($theme-color, 15%);
+      text-decoration: none;
+    }
+  }
+}
+
+.title-box {
+  height: 70px;
+  padding: 10px 0;
+  border-bottom: 1px solid $light-grey;
+}
+
+.description {
+  height: 50px;
+  color: $theme-color;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer-status {
+  padding: 5px;
+  color: $white;
+  background: $theme-color;
+}
+
+.open {
+  background: $light-green;
+  color: $dark-green;
+}
+
+.closed {
+  background: $light-red;
+  color: $dark-red;
+}

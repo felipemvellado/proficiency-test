@@ -1,12 +1,30 @@
-<%= link_to "Go home", root_path %>
-<%= link_to "Edit course", edit_course_path(@course) %>
-<%= link_to "Delete course", course_path(@course), :method => :delete,
-  data: { confirm: "Are you sure?" } %>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= link_to edit_course_path(@course), :class => "action" do %>
+        <i class="fa fa-pencil-square-o">&nbsp;Edit</i>
+      <% end %>
+      <%= link_to course_path(@course), :class => "action",
+        :method => :delete, data: { confirm: "Are you sure?" } do %>
+        <i class="fa fa-trash-o">&nbsp;Delete</i>
+      <% end %>
+    </div>
+  </div>
 
-<h2>Course: <%= @course.name %></h2>
-<p>Description: <%= @course.description %></p>
-<p>Status: <%= @course.status.humanize %></p>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2><%= @course.name %></h2>
+    </div>
 
-<%= render "classrooms/form" %>
+    <div class="panel-body">
+      <h3>Description: <%= @course.description %></h3>
+      <h3>Status do curso: <%= @course.status.humanize %></h3>
 
-<%= render @course.students %>
+      <% if @course.status == Course.statuses.keys[0] %>
+        <%= render "classrooms/form" %>
+      <% end %>
+
+      <%= render @course.students %>
+    </div>
+  </div>
+</div>

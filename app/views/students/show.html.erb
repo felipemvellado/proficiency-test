@@ -1,8 +1,24 @@
-<%= link_to "Go home", root_path %>
-<%= link_to "Edit student", edit_student_path(@student) %>
-<%= link_to "Delete student", student_path(@student), :method => :delete,
-  data: { confirm: "Are you sure?" } %>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= link_to edit_student_path(@student), :class => "action" do %>
+        <i class="fa fa-pencil-square-o">&nbsp;Edit</i>
+      <% end %>
+      <%= link_to student_path(@student), :class => "action",
+        :method => :delete, data: { confirm: "Are you sure?" } do %>
+        <i class="fa fa-trash-o">&nbsp;Delete</i>
+      <% end %>
+    </div>
+  </div>
 
-<h2>Student: <%= @student.name %></h2>
-<p>Register number: <%= @student.register_number %></p>
-<p>Status: <%= @student.status.humanize %></p>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2><%= @student.name %></h2>
+    </div>
+
+    <div class="panel-body">
+      <h3>Número de registro: <%= @student.register_number %></h3>
+      <h3>Status do estudante: <%= @student.status.humanize %></h3>
+    </div>
+  </div>
+</div>

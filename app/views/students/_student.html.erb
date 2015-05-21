@@ -1,6 +1,14 @@
-<div class="student-info">
-  <h3>Name of student: <%= student.name %></h3>
-  <p>Register Number: <%= student.register_number %></p>
-  <p>Status: <%= student.status.humanize %></p>
+<div class="col-sm-6 col-md-4">
+  <div class="thumbnail">
+    <h3 class="title-box"><%= link_to student.name, student %></h3>
+
+    <div class="caption">
+      <p class="description">
+        Número de registro: <%= student.register_number %>
+      </p>
+      <div class="footer-status">
+        <%= student.status.humanize %>
+      </div>
+    </div>
+  </div>
 </div>
-<hr />

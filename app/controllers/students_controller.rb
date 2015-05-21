@@ -25,7 +25,7 @@ class StudentsController < ApplicationController
 
   def update
     if @student.update(student_params)
-      options = { notice: 'Student was updated with successfully.' }
+      options = { danger: 'Student was updated with successfully.' }
       redirect_to @student, options
     else
       render :edit
@@ -35,7 +35,7 @@ class StudentsController < ApplicationController
   def destroy
     @student.destroy
     options = { notice: 'Student deleted with successfully.' }
-    redirect_to root_path
+    redirect_to root_path, options
   end
 
   private

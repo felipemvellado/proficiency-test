@@ -1,6 +1,16 @@
-<%= simple_form_for [@course, Classroom.new] do |f| %>
-  <%= f.input :student_id, as: :hidden %>
-  <%= f.input :student, as: :autocomplete,
-     url: autocomplete_student_name_course_classrooms_path(@course) %>
-  <%= f.button :submit %>
-<% end %>
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= simple_form_for [@course, Classroom.new] do |f| %>
+      <div class="form-group">
+        <%= f.input :student_id, as: :hidden %>
+        <%= f.input :student, as: :autocomplete,
+          url: autocomplete_student_name_course_classrooms_path(@course),
+          input_html: { autofocus: true, class: "form-control",
+              'data-id-element' => '#classroom_student_id', tabindex: 1 } %>
+      </div>
+      <div class="form-group">
+        <%= f.button :submit, tabindex: 1 %>
+      </div>
+    <% end %>
+  </div>
+</div>

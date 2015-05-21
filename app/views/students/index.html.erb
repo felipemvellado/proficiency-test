@@ -1,8 +1,24 @@
-<%= link_to "Create new student", new_student_path %>
+<div class="col-md-16">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= link_to "Courses", courses_path,
+          :class => "btn btn-default btn-lg" %>
+    </div>
+  </div>
 
-<% if @students.any? %>
-  <h1>List of all students</h1>
-  <%= render @students %>
-<% else %>
-  <h1>You do not have students yet.</h1>
-<% end %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2>Students</h2>
+    </div>
+
+    <div class="panel-body">
+      <% if @students.any? %>
+        <%= render @students %>
+      <% else %>
+        <div class="jumbotron">
+          <h2>You have no students yet. :(</h2>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

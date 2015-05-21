@@ -1,0 +1,19 @@
+.navbar-default {
+  padding: 5px 0;
+  background: $theme-color;
+  border-color: $theme-color;
+  border-radius: 0;
+}
+
+.navbar-brand {
+  a {
+    color: $link-color;
+    font-size: $font-size-large;
+  }
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-size: $font-size-medium;
+  color: $link-color;
+  text-decoration: none;
+}

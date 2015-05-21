@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProficiencyTest</title>
+  <title>Proficiency School</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Felipe Mota (sanomota@gmail.com)">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render "flash_messages" %>
-  <%= yield %>
+  <%= render "menu" %>
+
+  <div class="container">
+    <%= render "flash_messages" %>
+    <%= yield %>
+  </div>
 </body>
 </html>
