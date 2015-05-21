@@ -1,0 +1,8 @@
+<%= simple_form_for @course do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :status do %>
+    <%= f.select :status, Course.statuses.keys.to_a.map { |s| [s.humanize, s] } %>
+  <% end %>
+  <%= f.button :submit %>
+<% end %>

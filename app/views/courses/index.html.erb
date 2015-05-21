@@ -1,0 +1,8 @@
+<%= link_to "Create new course", new_course_path %>
+
+<% if @courses.any? %>
+  <h1>List of all courses</h1>
+  <%= render @courses %>
+<% else %>
+  <h1>You do not have courses yet.</h1>
+<% end %>
