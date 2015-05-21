@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  root 'students#index'
+  root 'courses#index'
 
   resources :students
-  resources :courses
+  resources :courses do
+    resources :classrooms do
+      get :autocomplete_student_name, :on => :collection
+    end
+  end
 end

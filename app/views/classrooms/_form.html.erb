@@ -1,0 +1,6 @@
+<%= simple_form_for [@course, Classroom.new] do |f| %>
+  <%= f.input :student_id, as: :hidden %>
+  <%= f.input :student, as: :autocomplete,
+     url: autocomplete_student_name_course_classrooms_path(@course) %>
+  <%= f.button :submit %>
+<% end %>

@@ -12,6 +12,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'therubyracer', platforms: :ruby
+# Autocomplete dependencies
+gem 'jquery-ui-rails'
+gem 'rails4-autocomplete'
 
 gem 'rails-assets-normalize-scss', '~> 3.0.1'
 gem 'rails-assets-stylish-scss', '~> 0.0.5'

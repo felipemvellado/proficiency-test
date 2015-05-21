@@ -1,8 +1,12 @@
 class CoursesController < ApplicationController
-  before_action :find_course, only: %i(show edit update destroy)
+  before_action :find_course, only: %i(edit update destroy)
 
   def index
     @courses = Course.all
+  end
+
+  def show
+    @course = Course.find(params[:id])
   end
 
   def new

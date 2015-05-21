@@ -6,3 +6,7 @@
 <h2>Course: <%= @course.name %></h2>
 <p>Description: <%= @course.description %></p>
 <p>Status: <%= @course.status.humanize %></p>
+
+<%= render "classrooms/form" %>
+
+<%= render @course.students %>
