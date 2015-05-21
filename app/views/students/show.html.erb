@@ -1,0 +1,8 @@
+<%= link_to "Go home", root_path %>
+<%= link_to "Edit student", edit_student_path(@student) %>
+<%= link_to "Delete student", student_path(@student), :method => :delete,
+  data: { confirm: "Are you sure?" } %>
+
+<h2>Student: <%= @student.name %></h2>
+<p>Register number: <%= @student.register_number %></p>
+<p>Status: <%= @student.status.humanize %></p>

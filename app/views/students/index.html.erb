@@ -1,0 +1,8 @@
+<%= link_to "Create new student", new_student_path %>
+
+<% if @students.any? %>
+  <h1>List of all students</h1>
+  <%= render @students %>
+<% else %>
+  <h1>You do not have students yet.</h1>
+<% end %>

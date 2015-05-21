@@ -47,8 +47,8 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.1'
-  gem 'shoulda-matchers', '~> 2.6.1'
+  gem 'rspec-rails', '~> 3.2.1'
+  gem 'shoulda-matchers', require: false
 
   gem 'rails-assets-angular-mocks', '1.2.14'
   gem 'rails-assets-angular-scenario', '1.2.14'
