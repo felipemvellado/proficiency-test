@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150521154200) do
   end
 
   add_index "classrooms", ["course_id"], name: "index_classrooms_on_course_id", using: :btree
+  add_index "classrooms", ["student_id", "course_id"], name: "index_classrooms_on_student_id_and_course_id", unique: true, using: :btree
   add_index "classrooms", ["student_id"], name: "index_classrooms_on_student_id", using: :btree
 
   create_table "courses", force: true do |t|

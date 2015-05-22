@@ -19,3 +19,4 @@ pt-BR:
       create:
         notice: "Estudante adicionado com sucesso!"
         error: "Ocorreu um erro ao matricular o estudante nesse curso."
+        not_unique: "Estudante já matriculado nesse curso."

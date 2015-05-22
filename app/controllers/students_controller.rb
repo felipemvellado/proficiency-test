@@ -10,7 +10,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.new(student_params)
+    @student = Student.includes(:courses).new(student_params)
 
     if @student.save
       options = { notice: t("flash.student.create.notice") }

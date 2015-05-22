@@ -1,5 +1,5 @@
 class ClassroomsController < ApplicationController
-  autocomplete :student, :name
+  autocomplete :student, :name, :display_value => :name
 
   def create
     course = Course.find(params[:course_id])
@@ -18,6 +18,9 @@ class ClassroomsController < ApplicationController
 
   rescue ActiveRecord::RecordNotFound
     options = { notice: t("flash.classroom.create.error") }
+    redirect_to course, options
+  rescue ActiveRecord::RecordNotUnique
+    options = { notice: t("flash.classroom.create.not_unique") }
     redirect_to course, options
   end
 

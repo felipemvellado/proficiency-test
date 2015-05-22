@@ -7,5 +7,6 @@ class CreateClassrooms < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :classrooms, [:student_id, :course_id], unique: true
   end
 end
