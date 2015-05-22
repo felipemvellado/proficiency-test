@@ -1,28 +1,22 @@
-== README
+## Proficiency Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> Ruby version: 2.1.5
 
-Things you may want to cover:
+> Rails version: 4.1.4
 
-* Ruby version
+### How to install
 
-* System dependencies
+After clone this repository:
 
-* Configuration
+* `bundle install`
+* `rake db:setup`
 
-* Database creation
+Now, just type: `rails s`.
 
-* Database initialization
+### To do
 
-* How to run the test suite
+* Improve auto-complete query and performance (replace to use elasticsearch);
+* Validations with javascript;
+* Better tests in controllers and associations;
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### I hope you enjoy it!
