@@ -7,6 +7,13 @@ class ClassroomsController < ApplicationController
     @classroom = Classroom.new
     @classroom.course = course
     @classroom.student = student
+    @classroom.entry_at = DateTime.new(
+      classroom_params["entry_at(1i)"].to_i,
+      classroom_params["entry_at(2i)"].to_i,
+      classroom_params["entry_at(3i)"].to_i,
+      classroom_params["entry_at(4i)"].to_i,
+      classroom_params["entry_at(5i)"].to_i
+    )
 
     if @classroom.save
       options = { notice: t("flash.classroom.create.notice") }
@@ -27,6 +34,10 @@ class ClassroomsController < ApplicationController
   private
 
   def classroom_params
-    params.require(:classroom).permit(:student, :student_id, :course)
+    params.require(:classroom).permit(:student, :student_id, :course, :entry_at)
+  end
+
+  def flatten_date_array hash
+    %w(1 2 3).map { |e| hash["date(#{e}i)"].to_i }
   end
 end

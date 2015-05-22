@@ -9,8 +9,11 @@
               'data-id-element' => '#classroom_student_id', tabindex: 1 } %>
       </div>
       <div class="form-group">
+        <%= f.input :entry_at, wrapper: :horizontal_select_date, tabindex: 2 %>
+      </div>
+      <div class="form-group">
         <%= f.button :submit, t("simple_form.forms.defaults.save"),
-          class: "btn btn-primary btn-lg", tabindex: 2 %>
+          class: "btn btn-primary btn-lg", tabindex: 3 %>
       </div>
     <% end %>
   </div>

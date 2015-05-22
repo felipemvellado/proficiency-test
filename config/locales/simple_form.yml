@@ -21,6 +21,7 @@ pt-BR:
     labels:
       classroom:
         student: "Selecione um estudante para matricular no curso"
+        entry_at: "Escolha a data da matrícula"
       defaults:
         name: 'Nome'
         student: 'Estudante'
