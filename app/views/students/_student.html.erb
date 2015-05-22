@@ -4,10 +4,11 @@
 
     <div class="caption">
       <p class="description">
-        Número de registro: <%= student.register_number %>
+        <%= t("activerecord.attributes.student.register_number") %>
+        <%= student.register_number %>
       </p>
       <div class="footer-status">
-        <%= student.status.humanize %>
+        <%= t("activerecord.attributes.student.#{student.status}") %>
       </div>
     </div>
   </div>

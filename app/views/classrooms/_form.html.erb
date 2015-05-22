@@ -9,7 +9,8 @@
               'data-id-element' => '#classroom_student_id', tabindex: 1 } %>
       </div>
       <div class="form-group">
-        <%= f.button :submit, tabindex: 1 %>
+        <%= f.button :submit, t("simple_form.forms.defaults.save"),
+          class: "btn btn-primary btn-lg", tabindex: 1 %>
       </div>
     <% end %>
   </div>

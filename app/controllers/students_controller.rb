@@ -13,7 +13,7 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
 
     if @student.save
-      options = { notice: 'Student created with successfully.' }
+      options = { notice: t("flash.student.create.notice") }
       redirect_to @student, options
     else
       render :new
@@ -25,7 +25,7 @@ class StudentsController < ApplicationController
 
   def update
     if @student.update(student_params)
-      options = { danger: 'Student was updated with successfully.' }
+      options = { notice: t("flash.student.update.notice") }
       redirect_to @student, options
     else
       render :edit
@@ -34,7 +34,7 @@ class StudentsController < ApplicationController
 
   def destroy
     @student.destroy
-    options = { notice: 'Student deleted with successfully.' }
+    options = { notice: t("flash.student.delete.notice") }
     redirect_to root_path, options
   end
 

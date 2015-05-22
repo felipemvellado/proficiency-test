@@ -1,0 +1,21 @@
+pt-BR:
+  flash:
+    student:
+      create:
+        notice: "Estudante criado com sucesso!"
+      update:
+        notice: "Estudante atualizado com sucesso!"
+      delete:
+        notice: "Estudante excluído com sucesso!"
+
+    course:
+      create:
+        notice: "Curso criado com sucesso!"
+      update:
+        notice: "Curso atualizado com sucesso!"
+      delete:
+        notice: "Curso excluído com sucesso!"
+    classroom:
+      create:
+        notice: "Estudante adicionado com sucesso!"
+        error: "Ocorreu um erro ao matricular o estudante nesse curso."

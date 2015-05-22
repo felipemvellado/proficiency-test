@@ -17,7 +17,7 @@ class CoursesController < ApplicationController
     @course = Course.new(course_params)
 
     if @course.save
-      options = { info: 'Course created with successfully.' }
+      options = { notice: t("flash.course.create.notice") }
       redirect_to @course, options
     else
       render :new
@@ -29,7 +29,7 @@ class CoursesController < ApplicationController
 
   def update
     if @course.update(course_params)
-      options = { info: 'Course was updated with successfully.' }
+      options = { notice: t("flash.course.update.notice") }
       redirect_to @course, options
     else
       render :edit
@@ -38,7 +38,7 @@ class CoursesController < ApplicationController
 
   def destroy
     @course.destroy
-    options = { info: 'Course deleted with successfully.' }
+    options = { notice: t("flash.course.delete.notice") }
     redirect_to root_path
   end
 

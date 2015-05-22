@@ -1,5 +1,32 @@
 pt-BR:
   simple_form:
+    forms:
+      student:
+        action: "Criar estudante"
+        edit: "Editar estudante"
+        links: "Estudantes"
+        no_records: "Você não tem estudantes ainda :("
+      course:
+        action: "Criar curso"
+        edit: "Editar curso"
+        links: "Cursos"
+        no_records: "Você não possui cursos ainda :("
+      defaults:
+        back: "Voltar"
+        save: "Salvar"
+        actions:
+          edit: "Editar"
+          delete: "Deletar"
+        delete: "Você tem certeza?"
+    labels:
+      classroom:
+        student: "Selecione um estudante para matricular no curso"
+      defaults:
+        name: 'Nome'
+        student: 'Estudante'
+        register_number: 'Número de registro'
+        description: 'Descrição'
+        status: 'Status'
     "yes": 'Sim'
     "no": 'Não'
     required:

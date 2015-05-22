@@ -9,15 +9,15 @@ class ClassroomsController < ApplicationController
     @classroom.student = student
 
     if @classroom.save
-      options = { info: 'Student was added with successfully.' }
+      options = { notice: t("flash.classroom.create.notice") }
       redirect_to @classroom.course, options
     else
-      options = { danger: 'Error in adding student to course.' }
+      options = { notice: t("flash.classroom.create.error") }
       redirect_to course, options
     end
 
   rescue ActiveRecord::RecordNotFound
-    options = { danger: 'Error in adding student to course.' }
+    options = { notice: t("flash.classroom.create.error") }
     redirect_to course, options
   end
 

@@ -5,7 +5,7 @@
     <div class="caption">
       <p class="description"><%= course.description %></p>
       <div class="footer-status <%= course.status %>">
-        <%= course.status.humanize %>
+        <%= t("activerecord.attributes.course.#{course.status}") %>
       </div>
     </div>
   </div>

@@ -1,11 +1,25 @@
 pt-BR:
   activerecord:
     models:
-      account_category:
-        one: Categoria
-        other: Categorias
+      student:
+        one: Estudante
+        other: Estudantes
+      course:
+        one: Curso
+        other: Cursos
 
     attributes:
-      account_category:
-        name: Nome
-        status: Situação
+      student:
+        name: 'Nome:'
+        register_number: 'Número de registro:'
+        status: 'Status:'
+        unregistered: "Não registrado"
+        registered: "Registrado"
+        message: 'Cursos que esse estudante está matriculado:'
+      course:
+        name: 'Nome:'
+        description: 'Descrição:'
+        status: 'Status:'
+        open: "Aberto"
+        closed: "Fechado"
+        message: 'Estudantes que estão matriculados no curso:'
